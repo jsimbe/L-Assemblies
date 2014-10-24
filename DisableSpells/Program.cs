@@ -142,7 +142,7 @@ namespace DisableSpells
                     foreach (var hero in from hero in ObjectManager.Get<Obj_AI_Hero>().Where(hero => !hero.IsMe)
                         let isEnabled = Config.Item(hero.ChampionName).GetValue<bool>()
                         let championName = Config.Item(hero.ChampionName).Name
-                        where hero.ChampionName == championName & isEnabled && !hero.IsDead
+                        where hero.ChampionName == championName && isEnabled && !hero.IsDead
                         select hero)
                     {
                         Packet.C2S.Cast.Encoded(new Packet.C2S.Cast.Struct(hero.NetworkId, spell.AvailableSpell)).Send();
