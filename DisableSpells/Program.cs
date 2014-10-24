@@ -64,7 +64,7 @@ namespace DisableSpells
             Spells.Add(new SpellStruct
             {
                 ChampionName = "Singed",
-                AvailableSpell = SpellSlot.R
+                AvailableSpell = SpellSlot.Q
             });
 
             Spells.Add(new SpellStruct
